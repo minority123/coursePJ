@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/styles_book.css">
+    <link rel="stylesheet" href="../misc/icons/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Vesper+Libre:regular,500,700,900" rel="stylesheet" />
+</head>
+<body>
+    
+    <header>
+        <div class="logo"><a href="../main.html"><img src="../misc/images/book1.svg" width="312" height="95"></a></div>
+        <div class="menu-body">
+            <ul class="menu-list">
+                <li><a href="../main.html" class="menu-link">Главная</a></li>
+                <li><a href="../about.html" class="menu-link">О библиотеке</a></li>
+                <li><a href="../faq.html" class="menu-link">Читателям</a></li>
+                <li><a href="../resources.html" class="menu-link">Электронные ресурсы</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="path"><a href="../main.hmtl">Главная</a> > <a href="../resources.html">Электронные ресурсы</a> > Портрет Дориана Грея </div>
+        <div class="books">
+        <script>
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.open("GET","../books.xml",false);
+            xmlhttp.send();
+            xmlDoc=xmlhttp.responseXML;
+            
+            var x=xmlDoc.getElementsByTagName("book");
+            var i = 2;
+            document.write("<h1>");
+            document.write(x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
+            document.write("</h1>");
+            document.write("<div class='book__head'><img src='");
+            document.write(x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue);
+            document.write("' width='226' height='357'/><div class='text'>");
+            document.write("<br>");
+            document.write("Год: ");
+            document.write(x[i].getElementsByTagName("year")[0].childNodes[0].nodeValue);
+            document.write("<br>");
+            document.write("Жанр: ");
+            document.write(x[i].getElementsByTagName("ganre")[0].childNodes[0].nodeValue);
+            document.write("<br>");
+            document.write("Слоган: ");
+            document.write(x[i].getElementsByTagName("slogan")[0].childNodes[0].nodeValue);
+            document.write("<br>");
+            document.write("Автор: ");
+            document.write(x[i].getElementsByTagName("author")[0].childNodes[0].nodeValue);
+            document.write("</div></div>");
+            document.write("<p>");
+            document.write(x[i].getElementsByTagName("text")[0].childNodes[0].nodeValue);
+            document.write("</p>");
+            </script>
+        </div>
+    </div>
+</div>
+        <footer>
+            <div class="footer-container">
+                <div class="centered">
+                    <div class="social">
+                        <ul class="social-list">
+                        <li><span class="icon-vk" style="display: flex;">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <a href="vk.com" class="social-link">vk.com/libraryunique</a>
+                        </span>
+                        </li>
+                        <li>
+                            <span class="icon-viber" style="display: flex;">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                                <a href="" class="social-link">+375293473471</a>
+                            </span>
+                        </li>
+                        <li><span class="icon-telegram" style="display: flex;">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <a href="" class="social-link">tg.me/libraryunique</a>
+                        </span>
+                        </li>
+                        <li>
+                            <span class="icon-insta" style="display: flex;">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                                <span class="path3"></span>
+                                <span class="path4"></span>
+                                <a href="" class="social-link">@libraryunique</a>
+                            </span>
+                        </li>
+                        <li><span class="icon-vk" style="display: flex;">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <a href="" class="social-link">discord.gg/hC7ARx7AMJ</a>
+                        </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navpanel">
+                    <ul class="nav-list">
+                        <li><a href="../main.html" class="nav-link">Главная</a></li>
+                        <li><a href="../about.html" class="nav-link">О библиотеке</a></li>
+                        <li><a href="../faq.html" class="nav-link">Читателям</a></li>
+                        <li><a href="../resources.html" class="nav-link">Электронные ресурсы</a></li>
+                    </ul>
+                </div>
+                <div class="time-of-work">
+                    <p>Время работы:
+                        пн-пт с 9:00 до 19:00
+                        Адрес:
+                        220010, г. Минск, ул. Приколов, 11 (правое крыло Дома Пушкина)
+                    </p>
+                </div>
+                </div>
+            </div>
+            <span class="copyright">© 2022 Все права защищены.</span>
+        </footer>
+        
+</body>
+</html>
