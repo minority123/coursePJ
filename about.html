@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Monda&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Monda:regular,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
@@ -9,22 +10,20 @@
         <link rel="stylesheet" href="misc/icons/style.css">
         <!-- Подключаем JS слайдера -->
         <script defer src="misc/simple-adaptive-slider/js/simple-adaptive-slider.js"></script>
-        <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            // инициализация слайдера
-            var slider = new ItcSimpleSlider('.itcss', {
-              loop: true,
-              autoplay: true,
-              swipe: true
-            });
-          });
-        </script>
+        <script defer>
+            document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("mob").addEventListener("click", function(){
+                document.querySelector("header").classList.toggle("open")
+            })
+            })
+            </script>
     </head>
 
 
     <body>
 
-        <header>
+        <header class="header">
+            <button class="menu_mobile" id="mob"><span></span><span></span><span></span></button>
             <div class="logo"><a href="main.html"><img src="misc/images/book1.svg" width="312" height="95"></a></div>
             <div class="menu-body">
                 <ul class="menu-list">
@@ -34,10 +33,16 @@
                     <li><a href="/resources.html" class="menu-link">Электронные ресурсы</a></li>
                 </ul>
             </div>
+            <ul class="menu-list">
+                <li><a href="/main.html" class="menu-link">Главная</a></li>
+                <li><a href="/about.html" class="menu-link">О библиотеке</a></li>
+                <li><a href="/faq.html" class="menu-link">Читателям</a></li>
+                <li><a href="/resources.html" class="menu-link">Электронные ресурсы</a></li>
+            </ul>
         </header>
 
     <div class="container">
-        <div class="path"><a href="/main.hmtl">Главная</a> > <a href="/about.html">О библиотеке</a></div>
+        <div class="path"><a href="/main.html">Главная</a> > <a href="/about.html">О библиотеке</a></div>
         <h1>О нас</h1>
         <div class="row">
 

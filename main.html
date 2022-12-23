@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="https://fonts.googleapis.com/css?family=Monda&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Monda:regular,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="misc/simple-adaptive-slider/css/simple-adaptive-slider.css">
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="misc/icons/style.css">
@@ -19,12 +17,20 @@
             });
           });
         </script>
+        <script defer>
+            document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("mob").addEventListener("click", function(){
+                document.querySelector("header").classList.toggle("open")
+            })
+            })
+        </script>
     </head>
 
 
     <body>
 
-        <header>
+        <header class="header">
+            <button class="menu_mobile" id="mob"><span></span><span></span><span></span></button>
             <div class="logo"><a href="main.html"><img src="misc/images/book1.svg" width="312" height="95"></a></div>
             <div class="menu-body">
                 <ul class="menu-list">
@@ -34,6 +40,12 @@
                     <li><a href="/resources.html" class="menu-link">Электронные ресурсы</a></li>
                 </ul>
             </div>
+            <ul class="menu-list">
+                <li><a href="/main.html" class="menu-link">Главная</a></li>
+                <li><a href="/about.html" class="menu-link">О библиотеке</a></li>
+                <li><a href="/faq.html" class="menu-link">Читателям</a></li>
+                <li><a href="/resources.html" class="menu-link">Электронные ресурсы</a></li>
+            </ul>
         </header>
 
     <div class="container">
@@ -60,15 +72,15 @@
             Знакомство с библиотекой
         </div>
         <div class="introduction-container">
-            <div class="introduction-image"></div>
+            <div class="introduction-image"><span class="introduction-text-mob">Наша библиотека предлагает самые удобные условия для предоставления литературных трудов студентам</span></div>
             <span class="introduction-text">Наша библиотека предлагает самые удобные условия для предоставления литературных трудов студентам</span>
         </div>
         <div class="introduction-container1">
-            <div class="introduction-image1"></div>
+            <div class="introduction-image1"><span class="introduction-text-mob">Привлечение молодёжи - наша основная цель, и без нововведений не обойтись. Поэтому мы используем новые технологии для комфортного времяпровождения</span></div>
                 <span class="introduction-text1">Привлечение молодёжи - наша основная цель, и без нововведений не обойтись. Поэтому мы используем новые технологии для комфортного времяпровождения</span>
             </div>
             <div class="introduction-container">
-                <div class="introduction-image2"></div>
+                <div class="introduction-image2"><span class="introduction-text-mob">Мы широко сотрудничаем с музеями литературы, научными исследовательскими институтами зарубежья</span></div>
                 <span class="introduction-text2">Мы широко сотрудничаем с музеями литературы, научными исследовательскими институтами зарубежья</span>
             </div>
             <div class="header-text">
@@ -87,6 +99,7 @@
 
         <footer>
             <div class="footer-container">
+                <a href="main.html"><div class="logo_footer"></div></a>
                 <div class="centered">
                     <div class="social">
                         <ul class="social-list">
@@ -128,10 +141,10 @@
                 </div>
                 <div class="navpanel">
                     <ul class="nav-list">
-                        <li><a href="" class="nav-link">Главная</a></li>
-                        <li><a href="" class="nav-link">О библиотеке</a></li>
-                        <li><a href="" class="nav-link">Читателям</a></li>
-                        <li><a href="" class="nav-link">Электронные ресурсы</a></li>
+                        <li><a href="/main.html" class="nav-link">Главная</a></li>
+                        <li><a href="/about.html" class="nav-link">О библиотеке</a></li>
+                        <li><a href="/faq.html" class="nav-link">Читателям</a></li>
+                        <li><a href="/resources.html" class="nav-link">Электронные ресурсы</a></li>
                     </ul>
                 </div>
                 <div class="time-of-work">

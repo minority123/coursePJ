@@ -39,6 +39,47 @@ header
     margin: 0 
     padding: 0 
     background: rgba(45,151,249,1) 
+.header>.menu-list
+    display: none
+.menu_mobile
+    display: none
+    width: 79px
+    border: none
+    background-color: transparent
+    position: relative
+    z-index: 1000
+    &__text
+        display: inline
+        justify-content: space-around
+        border-radius: 5px
+        color: black
+.menu_mobile span
+    position: absolute
+    width: 60px
+    height: 5px
+    background-color: white
+    left: 7px
+.menu_mobile span:nth-child(1)
+    transform: translateY(24px)
+
+.menu_mobile span:nth-child(2)
+    transform: translateY(39px)
+header.open .menu_mobile span:nth-child(1)
+    transform: rotate(-45deg) translateY(0)
+    background-color: black
+header.open .menu_mobile span:nth-child(2)
+    opacity: 0
+
+header.open .menu_mobile span:nth-child(3)
+    transform: rotate(45deg) translateY(0)
+    background-color: black
+header.open .menu_mobile
+    margin-top: 40px
+
+.menu_mobile span:nth-child(3)
+    transform: translateY(53px)
+
+
  
 footer 
     overflow: hidden 
@@ -269,3 +310,105 @@ html
 h1
     margin-left: 40px
     font-family: Monda
+
+@media (max-width: 420px) 
+    .introduction-text-mob
+        display: block
+    html
+        max-width: -webkit-fit-content
+        max-width: -moz-fit-content
+        max-width: 420px
+    .introduction-image
+        width: 100%
+    .introduction-image2
+        width: 100%
+    .introduction-image1
+        width: 100%
+    .introduction-text1
+        display: none
+    .introduction-text
+        display: none
+    .introduction-text2
+        display: none
+    .itcss 
+        max-width: 420px !important
+    
+    header
+        justify-content: space-between
+    .logo 
+        width: 81px
+        height: 79px
+    .logo img
+        width: 81px
+        height: 79px
+    .menu_mobile
+        display: flex
+    .container
+        width: 100%
+    .footer-container
+        flex-direction: column
+    .itcss__item>div
+        height: 445px !important
+        width: 420px !important
+        display: flex 
+        background-size: contain
+    .centered
+        flex-direction: column
+        width: auto
+    .social
+        width: auto
+    .navpanel
+        width: auto
+    .time-of-work
+        width: auto
+    .menu-list
+        position: absolute
+        padding-top: 100px
+        margin-top: 0
+        width: 350px
+        left: -350px
+        top: 0
+        background-color: white
+        flex-direction: column
+        justify-content: flex-start
+        transition: transform .5s
+    ul
+        padding-inline-start: 0
+        margin-block-start: 0
+        margin-block-end: 0
+        margin-inline-start: 0px
+        margin-inline-end: 0px
+    .menu-link
+        color: black
+        padding: 0
+    .menu-list li
+        padding: 20px
+    header.open .menu-list
+        transform: translateX(100%)
+        position: fixed
+    header.open .menu_mobile
+        position: fixed
+    .menu-body
+        display: none
+    .header>.menu-list
+        display: block
+        z-index: 999
+        height: 640px
+    .row
+        flex-direction: column
+    .sidebar
+        width: 100%
+        justify-content: center
+    .photo 
+        width: 100%
+        justify-content: center
+    h1
+        text-align: center
+        margin: 0
+    .path
+        display: flex
+        justify-content: center
+        margin: 0
+    .first-text
+        width: 95%
+        text-align: center

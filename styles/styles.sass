@@ -7,7 +7,67 @@ header
     margin: 0 
     padding: 0 
     background: rgba(45,151,249,1) 
- 
+
+ul 
+    display: block
+    list-style-type: none
+    margin-block-start: 1em
+    margin-block-end: 1em
+    margin-inline-start: 0px
+    margin-inline-end: 0px
+    padding-inline-start: 40px
+
+.header>.menu-list
+    display: none
+.menu_mobile
+    display: none
+    width: 79px
+    border: none
+    background-color: transparent
+    position: relative
+    z-index: 1000
+.menu_mobile span
+    position: absolute
+    width: 60px
+    height: 5px
+    background-color: white
+    left: 7px
+.menu_mobile span:nth-child(1)
+    transform: translateY(24px)
+
+.menu_mobile span:nth-child(2)
+    transform: translateY(39px)
+header.open .menu_mobile span:nth-child(1)
+    transform: rotate(-45deg) translateY(0)
+    background-color: black
+header.open .menu_mobile span:nth-child(2)
+    opacity: 0
+
+header.open .menu_mobile span:nth-child(3)
+    transform: rotate(45deg) translateY(0)
+    background-color: black
+header.open .menu_mobile
+    margin-top: 40px
+
+.menu_mobile span:nth-child(3)
+    transform: translateY(53px)
+
+
+
+
+.introduction-text-mob
+    display: none
+    height: 487px 
+    text-align: center
+    color: white
+    padding: 10% 0 
+    padding-right: 20px 
+    padding-left: 20px 
+    position: relative 
+    font-size: 36px 
+    font-family: Monda 
+    font-weight: 500 
+    box-sizing: border-box
 footer 
     overflow: hidden 
     width: 100% 
@@ -41,6 +101,8 @@ footer
 .logo img  
     position: relative 
  
+.menu_mobile
+    display: none
 
 .footer-container 
   display: flex 
@@ -283,6 +345,7 @@ footer
     display: flex 
     list-style-type: none 
     justify-content: flex-end 
+    line-height: 47.5px
  
 
 .menu-link 
@@ -312,8 +375,6 @@ footer
     box-shadow:  0 1px 4px rgba(0, 0, 0, .3), -23px 0 20px -23px rgba(0, 0, 0, .8), 23px 0 20px -23px rgba(0, 0, 0, .8), 0 0 40px rgba(0, 0, 0, .1) inset
     display: flex
     flex-direction: column
- 
-
 
 html
     width: 1879px
@@ -324,4 +385,101 @@ body
     font-size: 14px 
     font-family: Monda
     margin: 0
- 
+
+.logo_footer
+    background: url('/misc/images/book1.svg') no-repeat
+    background-size: 100% 100%
+    width: 100%
+    height: 76px
+.footer-container
+    flex-direction: column
+
+@media (max-width: 420px) 
+    .logo_footer
+        background: url('/misc/images/book1.png') no-repeat
+        background-size: 100% 100%
+        width: 87px
+        height: 76px
+        margin-left: auto
+        margin-right: auto
+    .introduction-text-mob
+        display: block
+    html
+        max-width: 420px
+    .introduction-image
+        width: 100%
+    .introduction-image2
+        width: 100%
+    .introduction-image1
+        width: 100%
+    .introduction-text1
+        display: none
+    .introduction-text
+        display: none
+    .introduction-text2
+        display: none
+    .itcss 
+        max-width: 420px !important
+    
+    header
+        justify-content: space-between
+    .logo 
+        width: 81px
+        height: 79px
+    .logo img
+        width: 81px
+        height: 79px
+    .menu_mobile
+        display: flex
+    .container
+        width: 100%
+    .footer-container
+        flex-direction: column
+    .itcss__item>div
+        height: 445px !important
+        width: 420px !important
+        display: flex 
+        background-size: contain
+    .centered
+        flex-direction: column
+        width: auto
+    .social
+        width: auto
+    .navpanel
+        width: auto
+    .time-of-work
+        width: auto
+    .menu-list
+        position: absolute
+        padding-top: 100px
+        margin-top: 0
+        width: 350px
+        left: -350px
+        top: 0
+        background-color: white
+        flex-direction: column
+        justify-content: flex-start
+        transition: transform .5s
+    ul
+        padding-inline-start: 0
+        margin-block-start: 0
+        margin-block-end: 0
+        margin-inline-start: 0px
+        margin-inline-end: 0px
+    .menu-link
+        color: black
+        padding: 0
+    .menu-list li
+        padding: 20px
+    header.open .menu-list
+        transform: translateX(100%)
+        position: fixed
+    header.open .menu_mobile
+        position: fixed
+    .menu-body
+        display: none
+    .header>.menu-list
+        display: block
+        z-index: 999
+        height: 640px
+  

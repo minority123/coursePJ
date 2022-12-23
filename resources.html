@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="https://fonts.googleapis.com/css?family=Monda&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Monda:regular,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="misc/simple-adaptive-slider/css/simple-adaptive-slider.css">
         <link rel="stylesheet" href="styles/styles_resources.css">
         <link rel="stylesheet" href="misc/icons/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer>
+            document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("mob").addEventListener("click", function(){
+                document.querySelector("header").classList.toggle("open")
+            })
+        })
+        </script>
     </head>
-
-
-    <body>
-
-        <header>
-            <div class="logo"><a href="figma_to_html.hmtl"><img src="misc/images/book1.svg" width="312" height="95"></a></div>
+        <body>
+        <header class="header">
+            <button class="menu_mobile" id="mob"><span></span><span></span><span></span></button>
+            <div class="logo"><a href="main.html"><img src="misc/images/book1.svg" width="312" height="95"></a></div>
             <div class="menu-body">
                 <ul class="menu-list">
                     <li><a href="/main.html" class="menu-link">Главная</a></li>
@@ -22,10 +24,15 @@
                     <li><a href="/resources.html" class="menu-link">Электронные ресурсы</a></li>
                 </ul>
             </div>
+            <ul class="menu-list">
+                <li><a href="/main.html" class="menu-link">Главная</a></li>
+                <li><a href="/about.html" class="menu-link">О библиотеке</a></li>
+                <li><a href="/faq.html" class="menu-link">Читателям</a></li>
+                <li><a href="/resources.html" class="menu-link">Электронные ресурсы</a></li>
+            </ul>
         </header>
-       
-    <div class="container">
-        <div class="path"><a href="/main.hmtl">Главная</a> > <a href="/about.html">Электронные ресурсы</a></div>
+        <div class="container">
+        <div class="path"><a href="/main.html">Главная</a> > <a href="/resources.html">Электронные ресурсы</a></div>
         <div class="books">
         <script>
             if (window.XMLHttpRequest)
@@ -54,9 +61,10 @@
             }
             </script>
         </div>
-    </div>
+        </div>
         <footer>
             <div class="footer-container">
+                <a href="main.html"><div class="logo_footer"></div></a>
                 <div class="centered">
                     <div class="social">
                         <ul class="social-list">
@@ -94,28 +102,27 @@
                             <a href="" class="social-link">discord.gg/hC7ARx7AMJ</a>
                         </span>
                         </li>
-                    </ul>
-                </div>
+                        </ul>
+                    </div>
                 <div class="navpanel">
                     <ul class="nav-list">
-                        <li><a href="" class="nav-link">Главная</a></li>
-                        <li><a href="" class="nav-link">О библиотеке</a></li>
-                        <li><a href="" class="nav-link">Читателям</a></li>
-                        <li><a href="" class="nav-link">Электронные ресурсы</a></li>
+                        <li><a href="/main.html" class="nav-link">Главная</a></li>
+                        <li><a href="/about.html" class="nav-link">О библиотеке</a></li>
+                        <li><a href="/faq.html" class="nav-link">Читателям</a></li>
+                        <li><a href="/resources.html" class="nav-link">Электронные ресурсы</a></li>
                     </ul>
                 </div>
-                <div class="time-of-work">
+                    <div class="time-of-work">
                     <p>Время работы:
                         пн-пт с 9:00 до 19:00
                         Адрес:
                         220010, г. Минск, ул. Приколов, 11 (правое крыло Дома Пушкина)
                     </p>
-                </div>
+                    </div>
                 </div>
             </div>
             <span class="copyright">© 2022 Все права защищены.</span>
         </footer>
-        
     </body>
 </html>  
             

@@ -8,22 +8,37 @@
     <link rel="stylesheet" href="../styles/styles_book.css">
     <link rel="stylesheet" href="../misc/icons/style.css">
     <link href="https://fonts.googleapis.com/css?family=Vesper+Libre:regular,500,700,900" rel="stylesheet" />
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("mob").addEventListener("click", function(){
+            document.querySelector("header").classList.toggle("open")
+        })
+        })
+    </script>
+</head>
 </head>
 <body>
     
-    <header>
+    <header class="header">
+        <button class="menu_mobile" id="mob"><span></span><span></span><span></span></button>
         <div class="logo"><a href="../main.html"><img src="../misc/images/book1.svg" width="312" height="95"></a></div>
         <div class="menu-body">
             <ul class="menu-list">
-                <li><a href="../main.html" class="menu-link">Главная</a></li>
-                <li><a href="../about.html" class="menu-link">О библиотеке</a></li>
-                <li><a href="../faq.html" class="menu-link">Читателям</a></li>
-                <li><a href="../resources.html" class="menu-link">Электронные ресурсы</a></li>
+                <li><a href="/main.html" class="menu-link">Главная</a></li>
+                <li><a href="/about.html" class="menu-link">О библиотеке</a></li>
+                <li><a href="/faq.html" class="menu-link">Читателям</a></li>
+                <li><a href="/resources.html" class="menu-link">Электронные ресурсы</a></li>
             </ul>
         </div>
+        <ul class="menu-list">
+            <li><a href="/main.html" class="menu-link">Главная</a></li>
+            <li><a href="/about.html" class="menu-link">О библиотеке</a></li>
+            <li><a href="/faq.html" class="menu-link">Читателям</a></li>
+            <li><a href="/resources.html" class="menu-link">Электронные ресурсы</a></li>
+        </ul>
     </header>
     <div class="container">
-        <div class="path"><a href="../main.hmtl">Главная</a> > <a href="../resources.html">Электронные ресурсы</a> > Портрет Дориана Грея </div>
+        <div class="path"><a href="../main.html">Главная</a> > <a href="../resources.html">Электронные ресурсы</a> > Портрет Дориана Грея </div>
         <div class="books">
         <script>
             if (window.XMLHttpRequest)
@@ -68,6 +83,7 @@
 </div>
         <footer>
             <div class="footer-container">
+                <a href="main.html"><div class="logo_footer"></div></a>
                 <div class="centered">
                     <div class="social">
                         <ul class="social-list">
